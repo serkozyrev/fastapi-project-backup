@@ -7,7 +7,7 @@ class Article(BaseModel):
     title: str
     content: str
     published: bool
-    class Config:
+    class ConfigDict:
         from_attributes=True
 
 class UserBase(BaseModel):
@@ -19,7 +19,7 @@ class UserDisplay(BaseModel):
     username:str
     email:str
     items: List[Article] =[]
-    class Config:
+    class ConfigDict:
         from_attributes=True
 
 class ArticleBase(BaseModel):
@@ -32,7 +32,7 @@ class ArticleBase(BaseModel):
 class User(BaseModel):
     id:int
     username: str
-    class Config:
+    class ConfigDict:
         from_attributes=True
 
 class ArticleDisplay(BaseModel):
@@ -40,5 +40,5 @@ class ArticleDisplay(BaseModel):
     content: str
     published: bool
     user:User
-    class Config:
+    class ConfigDict:
         from_attributes=True

@@ -5,6 +5,7 @@ from fastapi.responses import Response, HTMLResponse, PlainTextResponse
 from fastapi.params import Depends
 from sqlalchemy.orm import Session
 from typing import Optional, List
+from custom_log import log
 
 router = APIRouter(
     prefix="/product",
@@ -14,6 +15,7 @@ router = APIRouter(
 products =['watch', 'camera', 'phone']
 @router.get("/all")
 def get_all_products():
+    log("MyAPI", "Calling get_all_products")
     # return product
     data= " ".join(products)
     response= Response(content=data, media_type="text/plain")

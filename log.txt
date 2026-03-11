@@ -1,0 +1,1 @@
+MyAPI: Calling get_all_products

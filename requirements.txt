@@ -10,3 +10,5 @@ argon2-cffi
 aiofiles
 psycopg2
 six
+requests
+pytest
