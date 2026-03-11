@@ -8,3 +8,5 @@ python-multipart
 python-jose
 argon2-cffi
 aiofiles
+psycopg2
+six
