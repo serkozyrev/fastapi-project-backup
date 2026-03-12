@@ -42,3 +42,8 @@ class ArticleDisplay(BaseModel):
     user:User
     class ConfigDict:
         from_attributes=True
+
+class ProductBase(BaseModel):
+    title: str
+    description: str
+    price: float
