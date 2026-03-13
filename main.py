@@ -12,13 +12,14 @@ from db import models
 from db.database import engine
 from exceptions import StoryException
 from auth import authentication
-from router import blog_get, user, user_article, product, blog_post, file
+from router import blog_get, user, user_article, product, blog_post, file, dependencies
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from chat_client import html
 
 app = FastAPI()
 app.include_router(templates.router)
+app.include_router(dependencies.router)
 app.include_router(authentication.router)
 app.include_router(file.router)
 app.include_router(blog_get.router)
